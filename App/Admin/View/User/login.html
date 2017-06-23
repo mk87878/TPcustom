@@ -10,7 +10,7 @@
 <body>
 
 <div class="warp" style="margin-top: 10%;">
-    <h1 class="logo ">后台管理登录</h1>
+    <h1 class="logo ">管理登录</h1>
 
     <!--登陆框部分 start-->
 
