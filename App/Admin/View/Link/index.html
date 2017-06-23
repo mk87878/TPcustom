@@ -11,7 +11,7 @@
 
         <div class="row" style="padding-bottom: 10px">
             <div class="col-md-12">
-                <a href="{:U('Link/add')}" class="btn btn-primary">增加</a>
+                <a href="{:U('add')}" class="btn btn-primary">增加</a>
             </div>
         </div>
 
@@ -36,7 +36,7 @@
                                 <td>{$_lk.url}</td>
 
                                 <td>
-                                    <a href="/index.php?s=/Admin/Link/edit&id={$_lk.id}">编辑</a>
+                                    <a href="__URL__/edit&id={$_lk.id}">编辑</a>
                                     <a href="javascript:void(0)" class="delete text-danger"
                                        attr-id="{$_lk.id}" attr-message="删除">
                                         删除
@@ -62,13 +62,13 @@
 
 <script>
     var SCOPE = {
-        'set_status_url': '/index.php?s=/Admin/Link/del',
+        'set_status_url': '__URL__/del',
     }
 </script>
 <include file="Public/footer"/><!-- /footer -->
 
 <script>
-    highlight_subnav("/index.php?s=/Admin/{$Think.CONTROLLER_NAME}/index");
+    highlight_subnav("__URL__/index");
 </script>
 
 

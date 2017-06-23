@@ -11,7 +11,7 @@
 
         <div class="row" style="padding-bottom: 10px">
             <div class="col-md-12">
-                <a href="{:U('Banner/add')}" class="btn btn-primary">增加</a>
+                <a href="{:U('add')}" class="btn btn-primary">增加</a>
             </div>
         </div>
 
@@ -36,7 +36,7 @@
                                 <td>{$_lk.url}</td>
 
                                 <td>
-                                    <a href="/index.php?s=/Admin/banner/edit&id={$_lk.id}">编辑</a>
+                                    <a href="__URL__/edit&id={$_lk.id}">编辑</a>
                                     <a href="javascript:void(0)" class="delete text-danger"
                                        attr-id="{$_lk.id}" attr-message="删除">
                                         删除
