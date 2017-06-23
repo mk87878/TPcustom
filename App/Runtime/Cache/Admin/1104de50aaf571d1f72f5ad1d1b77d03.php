@@ -7,8 +7,8 @@
     <meta name="author" content="">
 
     <title>
-        <?php $title = $meta_title.'-黄金联赛后台管理'; ?>
-        <?php echo ($meta_title ? $title : '黄金联赛后台管理'); ?>
+        <?php $_web_config = F('web_config'); if($_web_config){ $titles = $meta_title.'-'.$_web_config['title'].'后台管理'; $title = $_web_config['title'].'后台管理'; $web_name = $_web_config['title'].'后台管理系统'; }else{ $titles = $meta_title.'-后台管理'; $title = '后台管理'; $web_name = '后台管理系统'; } ?>
+        <?php echo ($meta_title ? $titles : $title); ?>
     </title>
 
     <!-- Bootstrap core CSS -->
@@ -38,13 +38,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="<?php echo U('Index/index');?>">黄金联赛后台管理系统</a>
+        <a class="navbar-brand" href="<?php echo U('Index/index');?>"><?php echo ($web_name); ?></a>
     </div>
 
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav side-sub-menu">
             <li><a href="<?php echo U('Index/index');?>"><i class="fa fa-dashboard"></i> 首页</a></li>
-            <!--<li><a href="#"><i class="fa fa-bar-chart-o"></i> 菜单</a></li>-->
             <?php if(is_array($navs)): $i = 0; $__LIST__ = $navs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$navs): $mod = ($i % 2 );++$i;?><li><a href="/index.php?s=/Admin/<?php echo ($navs['url']); ?>"> <?php echo ($navs["icon"]); ?> <?php echo ($navs["name"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
 
@@ -106,7 +105,7 @@
 
             <div class="row">
                 <div class="form-group">
-                    <label class="col-md-12 control-label" style="line-height: 30px">缩略图:</label>
+                    <label class="col-md-12 control-label" >缩略图:</label>
                     <div class="col-md-5 st-overhidex">
                         <input id="file_upload" type="file" multiple="true">
                         <?php if($_tds['thumb']!=''){ ?>
@@ -121,22 +120,22 @@
             </div>
 
 
-            <div class="row">
-                <div class="form-group">
-                    <label class="col-md-12 control-label" style="line-height: 30px">视频:</label>
-                    <div class="col-md-5 st-overhidex">
-                        <input id="mp4_upload" type="file" multiple="true">
-                        <?php if($_tds['mp4']!=''){ ?>
-                        <video id="upload_org_code_mp4" src="<?php echo ($_tds["mp4"]); ?>" height="150" controls="controls"></video>
-                        <?php }else{ ?>
-                        <video style="display: none" id="upload_org_code_mp4" src="" height="150"
-                               controls="controls"></video>
-                        <?php } ?>
-                        <input id="file_upload_mp4" name="mp4" type="hidden" multiple="true"
-                               value="<?php echo ($_tds["mp4"]); ?>">
-                    </div>
-                </div>
-            </div>
+            <!--<div class="row">-->
+                <!--<div class="form-group">-->
+                    <!--<label class="col-md-12 control-label" >视频:</label>-->
+                    <!--<div class="col-md-5 st-overhidex">-->
+                        <!--<input id="mp4_upload" type="file" multiple="true">-->
+                        <!--<?php if($_tds['mp4']!=''){ ?>-->
+                        <!--<video id="upload_org_code_mp4" src="<?php echo ($_tds["mp4"]); ?>" height="150" controls="controls"></video>-->
+                        <!--<?php }else{ ?>-->
+                        <!--<video style="display: none" id="upload_org_code_mp4" src="" height="150"-->
+                               <!--controls="controls"></video>-->
+                        <!--<?php } ?>-->
+                        <!--<input id="file_upload_mp4" name="mp4" type="hidden" multiple="true"-->
+                               <!--value="<?php echo ($_tds["mp4"]); ?>">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
 
             <div class="row">
                 <div class="col-md-12">
@@ -147,7 +146,7 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <label>文章内容</label>
+                    <label>详细内容</label>
                     <textarea id="editor" name="content" autofocus><?php echo ($_tds["content"]); ?></textarea>
 
                 </div>

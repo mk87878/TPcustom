@@ -75,7 +75,7 @@
 
         <div class="row" style="padding-bottom: 10px">
             <div class="col-md-12">
-                <a href="<?php echo U('Banner/add');?>" class="btn btn-primary">增加</a>
+                <a href="<?php echo U('add');?>" class="btn btn-primary">增加</a>
             </div>
         </div>
 
@@ -99,7 +99,7 @@
                                 <td><?php echo ($_lk["url"]); ?></td>
 
                                 <td>
-                                    <a href="/index.php?s=/Admin/banner/edit&id=<?php echo ($_lk["id"]); ?>">编辑</a>
+                                    <a href="/index.php?s=/Admin/Banner/edit&id=<?php echo ($_lk["id"]); ?>">编辑</a>
                                     <a href="javascript:void(0)" class="delete text-danger"
                                        attr-id="<?php echo ($_lk["id"]); ?>" attr-message="删除">
                                         删除

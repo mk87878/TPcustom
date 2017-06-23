@@ -75,7 +75,7 @@
 
         <div class="row" style="padding-bottom: 10px">
             <div class="col-md-12">
-                <a href="<?php echo U('Link/add');?>" class="btn btn-primary">增加</a>
+                <a href="<?php echo U('add');?>" class="btn btn-primary">增加</a>
             </div>
         </div>
 
@@ -135,7 +135,7 @@
 <!-- /footer -->
 
 <script>
-    highlight_subnav("/index.php?s=/Admin/<?php echo (CONTROLLER_NAME); ?>/index");
+    highlight_subnav("/index.php?s=/Admin/Link/index");
 </script>
 
 
