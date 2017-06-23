@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>
+        <php>
+            $_web_config = F('web_config');
+            if($_web_config){
+                $titles = $meta_title.'-'.$_web_config['title'].'后台管理';
+                $title = $_web_config['title'].'后台管理';
+                $web_name = $_web_config['title'].'后台管理系统';
+            }else{
+                $titles = $meta_title.'-后台管理';
+                $title = '后台管理';
+                $web_name = '后台管理系统';
+            }
+
+
+        </php>
+        {$meta_title ? $titles : $title}
+    </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="__CSS__/bootstrap.min.css" rel="stylesheet">
+    <!-- Add custom CSS here -->
+    <link href="__CSS__/sb-admin.css" rel="stylesheet">
+    <link href="__CSS__/admin_style.css" rel="stylesheet">
+    <link rel="stylesheet" href="__FONT__/css/font-awesome.min.css">
+    <script src="__JS__/jquery-1.10.2.js"></script>
+    <script src="__STATIC__/dialog/layer.js"></script>
+    <script src="__JS__/bootstrap.min.js"></script>
+    <script src="__STATIC__/dialog.js"></script>
+    <script src="__STATIC__/labkr.js"></script>
+</head>
+<body>

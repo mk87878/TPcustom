@@ -1,0 +1,24 @@
+<link rel="stylesheet" type="text/css" href="__STATIC__/simditor/styles/simditor.css" />
+<script type="text/javascript" src="__STATIC__/simditor/scripts/module.js"></script>
+<script type="text/javascript" src="__STATIC__/simditor/scripts/hotkeys.js"></script>
+<script type="text/javascript" src="__STATIC__/simditor/scripts/uploader.js"></script>
+<script type="text/javascript" src="__STATIC__/simditor/scripts/simditor.js"></script>
+
+<script>
+    var toolbar = ['title', 'bold', 'italic', 'underline', 'strikethrough', 'fontScale', 'color', '|', 'ol', 'ul', 'blockquote', 'table', '|', 'link', 'hr', 'image', '|', 'indent', 'outdent', 'alignment'];
+
+    var editor = new Simditor({
+        textarea: $('#editor'),
+        //optional options
+        placeholder: '这里输入内容...',
+        toolbar: toolbar, //工具栏
+        defaultImage: 'Public/static/simditor/images/image.png', //编辑器插入图片时使用的默认图片
+        upload: {
+            url: SCOPE.simditor_img_upload, //文件上传的接口地址
+            params: null, //键值对,指定文件上传接口的额外参数,上传的时候随文件一起提交
+            fileKey: 'fileDataFileName', //服务器端获取文件数据的参数名
+            connectionCount: 3,
+            leaveConfirm: '正在上传文件'
+        }
+    });
+</script>

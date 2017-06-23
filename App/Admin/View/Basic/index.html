@@ -1,0 +1,127 @@
+<include file="Public/header"/>
+
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <include file="Public/nav"/>
+
+    <div id="page-wrapper">
+        <include file="Public/sider"/><!-- /.row -->
+        <form role="form" method="post" action="">
+
+            <div class="row">
+                <div class="col-md-7">
+                    <label>站点名称</label>
+                    <input name="title" type="text" class="form-control" value="{$_web_config.title}">
+                    <p class="help-block">站点的名称将显示在网页的标题处.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-7">
+                    <label>站点描述</label>
+                    <input  value="{$_web_config.description}" name="description" type="text" class="form-control">
+                    <p class="help-block">站点描述将显示在网页代码的头部.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-7">
+                    <label>站点关键词</label>
+                    <input value="{$_web_config.keywords}" name="keywords" type="text" class="form-control">
+                    <p class="help-block">请以英文半角逗号 "," 分割多个关键字.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <label>公司名称</label>
+                    <input value="{$_web_config.company}" name="company" type="text" class="form-control">
+                    <!--<p class="help-block">请以英文半角逗号 "," 分割多个关键字.</p>-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <label>站点备案号</label>
+                    <input value="{$_web_config.id_number}" name="id_number" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-7">
+                    <label>邮箱</label>
+                    <input  value="{$_web_config.email}" name="email" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <label>大概地址</label>
+                    <input  value="{$_web_config.address}" name="address" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <label>详细地址</label>
+                    <input  value="{$_web_config.address_detail}" name="address_detail" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <label>传真</label>
+                    <input  value="{$_web_config.fax}" name="fax" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <label>电话</label>
+                    <input  value="{$_web_config.phone}" name="phone" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <label>电话服务时间</label>
+                    <input  value="{$_web_config.phone_time}" name="phone_time" type="text" class="form-control">
+                    <p class="help-block">例:周一~周五, 8:00 - 20:00</p>
+
+                </div>
+            </div>
+
+
+            <div class="ow st-margintop15">
+                <div class="col-md-12">
+                    <button class="btn btn-primary loading-btn" type="submit"><span  class="glyphicon glyphicon-floppy-disk"></span>保存</button>
+
+                </div>
+            </div>
+        </form>
+
+
+
+
+    </div><!-- /#page-wrapper -->
+
+</div><!-- /#wrapper -->
+
+<include file="Public/footer"/><!-- /footer -->
+<script>
+    highlight_subnav("__URL__/index");
+</script>
+
+<script>
+
+    $("form").submit(function () {
+        var self = $(this);
+        lab_loading('.loading-btn');
+        $.post(self.attr("action"), self.serialize(), success, "json");
+        return false;
+
+        function success(data) {
+            lab_endLoading('.loading-btn');
+            if (data.status == 1) {
+                dialog.success(data.msg,document.URL);
+            } else {
+                dialog.error(data.msg);
+            }
+        }
+    });
+
+</script>

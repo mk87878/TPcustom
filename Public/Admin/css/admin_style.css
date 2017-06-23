@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+.line_height30{
+    line-height: 30px;
+}
+
+.st-paddingtop15{
+    padding-top: 15px;
+}
+.st-margintop15{
+    margin-top: 15px;
+}
+.st-overhidex{
+    overflow-x: hidden;
+}
+
+.tab_box_border{
+    padding: 0 10px;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+.btn span{
+    margin-right: 5px;
+}
+.loading{
+    animation: loda-anim .5s infinite linear;
+    -webkit-animation: loda-anim .5s infinite linear alternate;
+    -moz-animation: loda-anim .5s infinite linear alternate;
+    -ms-animation: loda-anim .5s infinite linear alternate;
+    -o-animation: loda-anim .5s infinite linear alternate;
+}
+@keyframes loda-anim {
+    from { -webkit-transform: rotateY(1deg); }
+    to { -webkit-transform: rotateY(179deg); }
+}
+
+@-moz-keyframes loda-anim {
+    from { -moz-transform: rotateY(1deg); }
+    to { -moz-transform: rotateY(179deg); }
+}
+
+@-webkit-keyframes loda-anim {
+    from { -webkit-transform: rotateY(1deg); }
+    to { -webkit-transform: rotateY(179deg); }
+}
+
+@-ms-keyframes loda-anim {
+    from { -ms-transform: rotateY(1deg); }
+    to { -ms-transform: rotateY(179deg); }
+}
+
+@-o-keyframes loda-anim {
+    from { -o-transform: rotateY(1deg); }
+    to { -o-transform: rotateY(179deg); }
+}

@@ -1,0 +1,143 @@
+<include file="Public/header"/>
+
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <include file="Public/nav"/>
+
+    <div id="page-wrapper">
+        <ul class="nav nav-tabs" id="nav_tabs">
+            <li class="active"><a href="javascript:;" >内容管理</a></li>
+            <li ><a href="__URL__/sort_index">分类管理</a></li>
+            <li ><a href="__URL__/intro">介绍设置</a></li>
+        </ul>
+        <include file="Public/sider"/><!-- /.row -->
+        <form role="form" method="post" action="">
+
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <label>标题</label>
+                        <input name="title" class="form-control" autofocus>
+                        <!--<p class="help-block">Example block-level help text here.</p>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <label>分类</label>
+                        <select name="sort_id" class="form-control">
+                            <option value="-1">未分类</option>
+                            <volist name="_sort" id="_st">
+                                <option value="{$_st.id}">{$_st.sort_name}</option>
+                            </volist>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="form-group">
+                    <label  class="col-md-12 control-label" >缩略图:</label>
+                    <div class="col-md-5 st-overhidex" >
+                        <input id="file_upload"  type="file" multiple="true" >
+                        <img style="display: none" id="upload_org_code_img" src="" height="150">
+                        <input id="file_upload_image" name="thumb" type="hidden" multiple="true" value="">
+                    </div>
+                </div>
+            </div>
+
+            <!---->
+            <!--<div class="row">-->
+                <!--<div class="form-group">-->
+                    <!--<label  class="col-md-12 control-label">视频:</label>-->
+                    <!--<div class="col-md-5 st-overhidex" >-->
+                        <!--<input id="mp4_upload"  type="file" multiple="true" >-->
+                        <!--<img style="display: none" id="upload_org_code_mp4" src="" height="150">-->
+                        <!--<input id="file_upload_mp4" name="mp4" type="hidden" multiple="true" value="">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <label>摘要</label>
+                    <textarea class="form-control" name="summary" placeholder="120字以内" autofocus maxlength="120"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label>详细内容</label>
+                    <textarea id="editor" name="content"> </textarea>
+
+                </div>
+            </div>
+
+
+            <div class="row st-margintop15">
+                <div class="col-md-12">
+                    <button class="btn btn-primary loading-btn" type="submit"><span  class="glyphicon glyphicon-floppy-disk"></span>发布</button>
+
+                </div>
+            </div>
+        </form>
+
+
+
+
+
+
+
+    </div><!-- /#page-wrapper -->
+
+</div><!-- /#wrapper -->
+<script>
+    var SCOPE = {
+        'simditor_img_upload' : '/index.php?s=/Admin/Image/simditoruploadimage',
+        'ajax_upload_image_url' : '/index.php?s=/Admin/Image/uploadifyimage',
+        'ajax_upload_swf' : '/Public/static/uploadify/uploadify.swf'
+    };
+
+</script>
+<include file="Public/footer"/><!-- /footer -->
+<include file="Public/uploadify"/><!-- /footer -->
+<include file="Public/simditor"/><!-- /footer -->
+
+<script>
+    highlight_subnav("__URL__/index");
+</script>
+
+<script>
+
+    $("form").submit(function () {
+        var self = $(this);
+        lab_loading('.loading-btn');
+        $.post(self.attr("action"), self.serialize(), success, "json");
+        return false;
+
+        function success(data) {
+            lab_endLoading('.loading-btn');
+            if (data.status == 1) {
+                dialog.success(data.msg,data.data);
+            } else {
+                dialog.error(data.msg);
+            }
+        }
+    });
+
+</script>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,136 @@
+<include file="Public/header"/>
+
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <include file="Public/nav"/>
+
+    <div id="page-wrapper">
+        <ul class="nav nav-tabs">
+            <li ><a href="__URL__/index">内容管理</a></li>
+            <li class="active"><a href="javascript:;">分类管理</a></li>
+            <li ><a href="__URL__/intro">介绍设置</a></li>
+        </ul>
+            <include file="Public/sider"/><!-- /.row -->
+
+
+            <div class="row">
+                <div class="col-md-9 pull-left">
+                    <a href="__URL__/sort_add" class="btn btn-primary">增加</a>
+                </div>
+                <div class="col-md-3 pull-right">
+                    <div class="form-group input-group">
+                        <input id="search_input" type="text" class="form-control" value="{$_search.search_input}"
+                               placeholder="请输入名称搜索">
+                        <span class="input-group-btn">
+                  <button class="btn btn-default" id="search_btn" onclick="search()" type="button"><i
+                          class="fa fa-search"></i></button>
+                </span>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th width="4%">#</th>
+                                <th>分类名称</th>
+                                <th class="col-md-2">发布时间</th>
+                                <th width="10%">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <volist name="_sort" id="_td">
+                                <tr>
+                                    <td>{$key+1+$_page}</td>
+
+                                    <td>{$_td.sort_name}</td>
+                                    <td>{$_td.time|date='Y-m-d H:i',###}</td>
+                                    <td>
+                                        <a href="__URL__/sort_edit&id={$_td.id}">编辑</a>
+                                        <a href="javascript:void(0)" class="delete text-danger"
+                                           attr-id="{$_td.id}" attr-message="删除">
+                                            删除
+                                        </a>
+
+                                    </td>
+                                </tr>
+                            </volist>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class=" clearfix col-md-7 pull-right">
+                    <ul class='pagination pull-right' style="margin: 0">
+                        {$_pages}
+                    </ul>
+                </div>
+            </div>
+
+
+        </div><!-- /#page-wrapper -->
+
+
+</div><!-- /#wrapper -->
+
+<script>
+    var SCOPE = {
+        'set_status_url': '__URL__/sort_del',
+    }
+</script>
+<include file="Public/footer"/><!-- /footer -->
+
+<script>
+    highlight_subnav("__URL__/index");
+</script>
+
+<script>
+    function search() {
+        var input = $('#search_input').val();
+        window.location.href = '__URL__/sort_index/search_input/' + input;
+    }
+</script>
+
+<script>
+    /**
+     * 删除操作JS
+     */
+    $('.delete').on('click', function () {
+        var id = $(this).attr('attr-id');
+        var a = $(this).attr("attr-a");
+        var msg = $(this).attr("attr-message");
+        var url = SCOPE.set_status_url;
+
+        data = {};
+        data['id'] = id;
+
+
+        layer.open({
+            type: 0,
+            title: '是否提交？',
+            btn: ['是', '否'],
+            icon: 3,
+            closeBtn: 2,
+            content: "是否确定" + msg,
+            scrollbar: true,
+            yes: function () {
+                // 执行相关跳转
+                todelete(url, data);
+            },
+
+        });
+
+    });
+</script>
+
+

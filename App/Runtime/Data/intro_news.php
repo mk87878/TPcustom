@@ -1,0 +1,1 @@
+a:3:{s:11:"description";s:2:" 1";s:5:"thumb";s:36:"/upload/2017/06/21/594a304819b75.png";s:4:"name";s:10:"intro_news";}

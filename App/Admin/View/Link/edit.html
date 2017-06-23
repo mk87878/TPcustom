@@ -1,0 +1,138 @@
+<include file="Public/header"/>
+
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <include file="Public/nav"/>
+
+    <div id="page-wrapper">
+        <include file="Public/sider"/><!-- /.row -->
+        <form role="form" method="post" action="">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <label>友链网站名</label>
+                        <input name="name" value="{$_link.name}" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <label>友链连接</label>
+                    <textarea class="form-control" name="url" placeholder="http://" >{$_link.url}</textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label  class="col-md-12 control-label" >缩略图:</label>
+                    <div class="col-md-5 st-overhidex" >
+                        <input id="file_upload"  type="file" multiple="true" >
+                        <img  id="upload_org_code_img" src="{$_link.img}" height="150">
+                        <input id="file_upload_image" name="img" type="hidden" multiple="true" value="{$_link.img}">
+                    </div>
+                </div>
+            </div>
+            <!--<div class="row">-->
+                <!--<div class="form-group">-->
+                    <!--<label  class="col-md-12 control-label" >缩略图hover:</label>-->
+                    <!--<div class="col-md-5 st-overhidex" >-->
+                        <!--<input id="file_upload_hover"  type="file" multiple="true" >-->
+                        <!--<img  id="upload_org_code_img_hover" src="{$_link.hover}" height="150">-->
+                        <!--<input id="file_upload_image_hover" name="hover" type="hidden" multiple="true" value="">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+
+
+
+
+            <div class="row st-margintop15">
+                <div class="col-md-12">
+                    <input type="hidden" name="id" value="{$_link.id}">
+                    <button class="btn btn-primary loading-btn" type="submit"><span  class="glyphicon glyphicon-floppy-disk"></span>保存</button>
+
+                </div>
+            </div>
+        </form>
+
+
+    </div><!-- /#page-wrapper -->
+
+</div><!-- /#wrapper -->
+<script>
+    var SCOPE = {
+        'simditor_img_upload' : '/index.php?s=/Admin/Upload/simditoruploadimage',
+        'ajax_upload_image_url' : '/index.php?s=/Admin/Upload/uploadifyimage',
+        'ajax_upload_swf' : '/Public/static/uploadify/uploadify.swf'
+    };
+
+</script>
+<include file="Public/footer"/><!-- /footer -->
+<include file="Public/uploadify"/><!-- /footer -->
+<include file="Public/simditor"/><!-- /footer -->
+
+<script>
+    highlight_subnav("/index.php?s=/Admin/{$Think.CONTROLLER_NAME}/index");
+</script>
+
+<script>
+    /**
+     * 图片上传功能
+
+    $('#file_upload_hover').uploadify({
+        'swf': SCOPE.ajax_upload_swf,
+        'uploader': SCOPE.ajax_upload_image_url,
+        'buttonText': '上传图片',
+        'fileTypeDesc': 'Image Files',
+        'fileObjName': 'img_file',
+        //允许上传的文件后缀
+        'fileTypeExts': '*.gif; *.jpg; *.png',
+        'onUploadSuccess': function (file, data, response) {
+            // response true ,false
+            if (response) {
+                var obj = JSON.parse(data); //由JSON字符串转换为JSON对象
+
+                console.log(data);
+                $('#' + file.id).find('.data').html(' 上传完毕');
+
+                $("#upload_org_code_img_hover").attr("src", obj.data);
+                $("#file_upload_image_hover").attr('value', obj.data);
+                $("#upload_org_code_img_hover").show();
+            } else {
+                alert('上传失败');
+            }
+        },
+    });
+     */
+
+</script>
+<script>
+
+    $("form").submit(function () {
+        var self = $(this);
+        lab_loading('.loading-btn');
+        $.post(self.attr("action"), self.serialize(), success, "json");
+        return false;
+
+        function success(data) {
+            lab_endLoading('.loading-btn');
+            if (data.status == 1) {
+                dialog.success(data.msg,document.URL);
+            } else {
+                dialog.error(data.msg);
+            }
+        }
+
+    });
+
+</script>
+
+
+
+
+
+
+

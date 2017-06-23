@@ -1,0 +1,104 @@
+
+
+<include file="Public/header"/>
+
+<div id="wrapper">
+
+  <!-- Sidebar -->
+  <include file="Public/nav"/>
+
+
+  <div id="page-wrapper">
+
+    <div class="row">
+      <div class="col-md-12">
+        <h1>首页</h1>
+        <ol class="breadcrumb">
+          <li class="active"><i class="fa fa-dashboard"></i> 首页</li>
+        </ol>
+
+      </div>
+    </div><!-- /.row -->
+
+    <div class="row">
+
+      <div class="col-md-3">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <i class="fa fa-file-text-o fa-5x"></i>
+              </div>
+              <div class="col-xs-6 text-right">
+                <p class="announcement-text">赛事指引文章数</p>
+                <p class="announcement-heading">{$_count.guide}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <i class="fa fa-file-text-o fa-5x"></i>
+              </div>
+              <div class="col-xs-6 text-right">
+                <p class="announcement-text">赛事新闻文章数</p>
+                <p class="announcement-heading">{$_count.news}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <i class="fa fa-file-video-o fa-5x"></i>
+              </div>
+              <div class="col-xs-6 text-right">
+                <p class="announcement-text">赛事视频数</p>
+                <p class="announcement-heading">{$_count.live}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-3">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-xs-6">
+                <i class="fa fa-users fa-5x"></i>
+              </div>
+              <div class="col-xs-6 text-right">
+                <p class="announcement-text">合作伙伴数</p>
+                <p class="announcement-heading">{$_count.partner}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div><!-- /#page-wrapper -->
+
+</div><!-- /#wrapper -->
+
+
+<include file="Public/footer"/><!-- /footer -->
+
+<script type="text/javascript">
+  highlight_subnav("{:U('Index/index')}");
+</script>
