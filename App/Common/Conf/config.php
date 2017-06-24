@@ -5,7 +5,7 @@ return array(
 
     'DEFAULT_MODULE'     => 'Home',
     'MODULE_DENY_LIST'   => array('Common'),
-    'MODULE_ALLOW_LIST'  => array('Home','Admin'),
+    'MODULE_ALLOW_LIST'  => array('Home','Dev'),
 
     /* URL配置 */
     'URL_CASE_INSENSITIVE' => true, //默认false 表示URL区分大小写 true则表示不区分大小写

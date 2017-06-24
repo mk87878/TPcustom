@@ -6015,3 +6015,270 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000470s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
 
+[ 2017-06-23T11:25:49+08:00 ] ::1 /index.php?s=/Admin/News/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004134s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003878s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004063s ]
+NOTIC: [8] Undefined index: p /Users/zhangmingwen/Documents/code/TPcustom/App/Admin/Controller/NewsController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `e_news` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `e_news` WHERE `status` <> -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `e_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `e_menu` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 AND `controller` = 'News' LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000341s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001576s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder,menu_id desc  [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067915s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002285s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004590s ]
+
+[ 2017-06-23T11:25:49+08:00 ] ::1 /index.php?s=/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+NOTIC: [8] Undefined variable: meta_title /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 12 行.
+NOTIC: [8] Undefined variable: meta_title /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `e_menu` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder,menu_id desc  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: _count /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 89 行.
+NOTIC: [8] Undefined variable: _count /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 105 行.
+NOTIC: [8] Undefined variable: _count /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 121 行.
+NOTIC: [8] Undefined variable: _count /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 139 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047057s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047148s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000238s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000645s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000709s ]
+
+[ 2017-06-23T11:25:51+08:00 ] ::1 /index.php?s=/Admin/Banner/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+SQL: SHOW COLUMNS FROM `e_banner` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `e_banner` WHERE `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `e_menu` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 AND `controller` = 'Banner' LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000230s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder,menu_id desc  [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030392s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030477s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000777s ]
+
+[ 2017-06-23T11:25:51+08:00 ] ::1 /index.php?s=/Admin/News/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+NOTIC: [8] Undefined index: p /Users/zhangmingwen/Documents/code/TPcustom/App/Admin/Controller/NewsController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `e_news` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `e_news` WHERE `status` <> -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `e_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `e_menu` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 AND `controller` = 'News' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder,menu_id desc  [ RunTime:0.0026s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028302s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000460s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001734s ]
+
+[ 2017-06-23T11:25:57+08:00 ] ::1 /index.php?s=/Admin/News/sort_index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001306s ]
+NOTIC: [8] Undefined index: p /Users/zhangmingwen/Documents/code/TPcustom/App/Admin/Controller/NewsController.class.php 第 117 行.
+SQL: SHOW COLUMNS FROM `e_sort` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `e_sort` WHERE `controller` = 'News' AND `status` <> -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `e_sort` WHERE `controller` = 'News' AND `status` <> -1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `e_menu` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 AND `controller` = 'News' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000272s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder,menu_id desc  [ RunTime:0.0006s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028783s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028878s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000791s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000859s ]
+
+[ 2017-06-23T11:25:57+08:00 ] ::1 /index.php?s=/Admin/News/intro
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+SQL: SHOW COLUMNS FROM `e_menu` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 AND `controller` = 'News' LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027808s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027879s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000668s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000726s ]
+
+[ 2017-06-23T11:25:58+08:00 ] ::1 /index.php?s=/Admin/News/sort_index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000551s ]
+NOTIC: [8] Undefined index: p /Users/zhangmingwen/Documents/code/TPcustom/App/Admin/Controller/NewsController.class.php 第 117 行.
+SQL: SHOW COLUMNS FROM `e_sort` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `e_sort` WHERE `controller` = 'News' AND `status` <> -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `e_sort` WHERE `controller` = 'News' AND `status` <> -1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `e_menu` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 AND `controller` = 'News' LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder,menu_id desc  [ RunTime:0.0008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026697s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026773s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000697s ]
+
+[ 2017-06-23T11:25:59+08:00 ] ::1 /index.php?s=/Admin/News/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000672s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+NOTIC: [8] Undefined index: p /Users/zhangmingwen/Documents/code/TPcustom/App/Admin/Controller/NewsController.class.php 第 10 行.
+SQL: SHOW COLUMNS FROM `e_news` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `e_news` WHERE `status` <> -1 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `e_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `e_menu` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 AND `controller` = 'News' LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000242s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder,menu_id desc  [ RunTime:0.0007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022807s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000205s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000504s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000555s ]
+
+[ 2017-06-23T11:26:00+08:00 ] ::1 /index.php?s=/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Undefined variable: meta_title /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 12 行.
+NOTIC: [8] Undefined variable: meta_title /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `e_menu` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder,menu_id desc  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: _count /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 89 行.
+NOTIC: [8] Undefined variable: _count /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 105 行.
+NOTIC: [8] Undefined variable: _count /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 121 行.
+NOTIC: [8] Undefined variable: _count /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 139 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033425s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033488s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000506s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000566s ]
+
+[ 2017-06-23T11:56:48+08:00 ] ::1 /index.php?s=/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006445s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000178s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000279s ]
+NOTIC: [8] Undefined variable: meta_title /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 12 行.
+NOTIC: [8] Undefined variable: meta_title /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 13 行.
+SQL: SHOW COLUMNS FROM `e_menu` [ RunTime:0.0161s ]
+SQL: SELECT * FROM `e_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder,menu_id desc  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined variable: _count /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 89 行.
+NOTIC: [8] Undefined variable: _count /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 105 行.
+NOTIC: [8] Undefined variable: _count /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 121 行.
+NOTIC: [8] Undefined variable: _count /Users/zhangmingwen/Documents/code/TPcustom/App/Runtime/Cache/Admin/9df924d9a2d217daa77a359c5bee0c33.php 第 139 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.150289s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.150397s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005561s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005655s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006612s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006800s ]
+

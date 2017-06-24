@@ -124,7 +124,7 @@
 
 <script>
     var SCOPE = {
-        'set_status_url': '/index.php?s=/Admin/<?php echo (CONTROLLER_NAME); ?>/del',
+        'set_status_url': '/index.php?s=/Admin/Banner/del',
     }
 </script>
 <!-- JavaScript -->
@@ -135,7 +135,7 @@
 <!-- /footer -->
 
 <script>
-    highlight_subnav("/index.php?s=/Admin/<?php echo (CONTROLLER_NAME); ?>/index");
+    highlight_subnav("/index.php?s=/Admin/Banner/index");
 </script>
 
 

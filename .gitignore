@@ -4,3 +4,4 @@
 node_modules
 upload
 App/Runtime/Cache/*
+App/Runtime/Logs/*
